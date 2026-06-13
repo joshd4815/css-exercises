@@ -12,6 +12,14 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+
+  /*
+    Sets the whole header as a flex container and aligns items.
+  */
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px;
 }
 
 .profile-image {
@@ -45,4 +53,31 @@ a {
 
 ul {
   list-style-type: none;
+
+  /* 
+    Making the <ul> a flex container to put the links on one line 
+    Also removes default padding that's normally used for bullets.
+  */
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:0px;
+  padding:0px;
+}
+
+.left{
+  /*
+    Groups the items that need to remain on the left
+    Gap between items 
+  */
+  display:flex;
+  gap:10px;
+}
+
+.right{
+  /*
+    Flex container with gaps between items.
+  */
+  display:flex;
+  gap:5px;
 }
