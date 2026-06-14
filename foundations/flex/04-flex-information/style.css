@@ -10,6 +10,35 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+  /* This handles the title centering and bottom gap */
+  display:flex;
+  justify-content:center;
+  margin-bottom:32px;
+}
+
+/*Each item is the image and the text. 
+This arranges them in a flex contaioner,
+centers them, and adds a gap.
+*/
+.items{
+  display:flex;
+  justify-content:center;
+  gap:52px;
+}
+
+/*
+This sets every item to be image on top, then text.
+Centers them horizontally.
+flex-wrap to wrap the text.
+And width to set a defined width.
+*/
+.item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  flex-wrap:wrap;
+  max-width:200px;
+  text-align:center;
 }
 
 /* do not edit this footer */
@@ -24,3 +53,4 @@ img {
   justify-content: center;
   background: #eee;
 }
+
