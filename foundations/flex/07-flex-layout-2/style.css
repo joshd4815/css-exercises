@@ -27,3 +27,64 @@ body {
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
 }
+
+/* Solution */
+
+body{
+  /* 
+  Without this, the footer does not pin to the bottom because we can't tell the 
+  content class to grow to fill empty space with flex:1.
+  */
+  display:flex;
+  flex-direction:column;
+}
+
+.header{
+  font-size:32px;
+  font-weight:900;
+  /* I've only used this because I think it's an easy way to center it vertically */
+  display:flex;
+  align-items:center;
+  padding-left:16px;
+}
+
+.footer{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.content{
+  display:flex;
+  /* This tells the content section to grow to fill empty space */
+  flex:1;
+}
+
+.cards{
+  display:flex;
+  flex-wrap:wrap;
+  padding:48px;
+  gap:20px;
+}
+
+.card{
+  padding:10px;
+  flex-basis:300px;
+}
+
+.sidebar{
+  width:300px;
+  flex-shrink:0;
+  padding:16px;
+}
+
+ul{
+  padding:0px;
+  list-style-type:none;
+}
+
+a{
+  text-decoration:none;
+  color:white;
+  font-size:24px;
+}
